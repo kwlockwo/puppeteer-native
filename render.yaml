@@ -13,6 +13,7 @@ services:
   - type: cron
     name: render-example-puppeteer-cron
     env: node
+    schedule: "0 0 * * *"
     region: oregon
     plan: starter
     buildCommand: ./render-build.sh
