@@ -4,9 +4,19 @@ services:
     name: render-example-puppeteer
     env: node
     region: oregon
-    plan: free
+    plan: starter
     buildCommand: ./render-build.sh
     startCommand: node index.js
+    envVars:
+      - key: PUPPETEER_CACHE_DIR
+        value: /opt/render/project/puppeteer
+  - type: cron
+    name: render-example-puppeteer-cron
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: ./render-build.sh
+    startCommand: node cron.js
     envVars:
       - key: PUPPETEER_CACHE_DIR
         value: /opt/render/project/puppeteer
