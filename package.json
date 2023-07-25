@@ -1,0 +1,15 @@
+{
+  "name": "render-example-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Render",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.7.2"
+  },
+  "engines": {
+    "node": "18.14.x"
+  }
+}

@@ -1,0 +1,12 @@
+services:
+  # A Node web service
+  - type: web
+    name: render-example-puppeteer
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: ./render-build.sh
+    startCommand: node index.js
+    envVars:
+      - key: PUPPETEER_CACHE_DIR
+        value: /opt/render/project/puppeteer
