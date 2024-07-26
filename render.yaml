@@ -2,7 +2,7 @@ services:
   # A Node web service
   - type: web
     name: render-example-puppeteer
-    env: node
+    runtime: node
     region: oregon
     plan: starter
     buildCommand: ./render-build.sh
@@ -12,7 +12,7 @@ services:
         value: /opt/render/project/puppeteer
   - type: cron
     name: render-example-puppeteer-cron
-    env: node
+    runtime: node
     schedule: "0 0 * * *"
     region: oregon
     plan: starter
