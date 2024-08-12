@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 // Root path GET endpoint
-app.get("/", async (req, res) => {
+app.get("/render", async (req, res) => {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -22,6 +22,10 @@ app.get("/", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+})
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
